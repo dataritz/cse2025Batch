@@ -1,0 +1,21 @@
+<!--
+    How to fetch html element in js
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Hi</p>
+    <p id="p2">Para-2    </p>
+    <button onclick="ChangeText()">ClickMe</button>
+    <script>
+        function ChangeText(){
+           document.getElementById('p1').innerText = 'Byee';
+        }
+    </script>
+</body>
+</html>
