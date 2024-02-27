@@ -1,0 +1,42 @@
+<!--Create two textBox and one button
+    write a function which fetch values of textbox and perform addtion 
+    operation on button click
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1">
+    <input type="text" id="t2">
+    <button onclick="Operation('+')"> + </button>
+    <button onclick="Operation('-')"> - </button>
+    <button onclick="Operation('*')"> * </button>
+    <button onclick="Operation('/')"> / </button>
+    <button onclick="Operation('**')"> ** </button>
+    <p id="p1">This is para 1</p>
+    <script>
+        function Operation(opr){
+            let num1 = document.getElementById("t1").value;
+            let num2 = document.getElementById("t2").value;
+            switch(opr){
+                case '+':c = Number(num1)+Number(num2);
+                    break;
+                case '-':c = Number(num1)-Number(num2);
+                break;
+                case '*':c = Number(num1)*Number(num2);
+                break;
+                case '/':c = Number(num1)/Number(num2);
+                break;
+                case '**':c = Number(num1)**Number(num2);
+                break;
+            }
+            document.getElementById("p1").innerText = c;
+
+        }
+    </script>
+</body>
+</html>
