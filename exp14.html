@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="color: red;border: 2px solid blue;">This is para 1</p>
+    <p id="p1">This is para 2</p>
+    <p id="p2">This is para 3</p>
+    <button onclick="change()">Click me</button>
+    <button>Click me</button>
+    <script>
+        function change(){
+            let elm = document.getElementById('p1');
+            elm.style.color = 'red';
+            elm.style.border = '3px solid green';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="c1">a</p>
+    <p class="c1">xyz</p>
+    <p class="c1">pqr</p>
+    <p class="c1">abc</p>
+    <button onclick="display()">Clcik Me</button>
+    <p class="c2"></p>
+    <script>
+        function display(){
+            let allP = document.getElementsByClassName('c1');
+            let result = document.getElementsByClassName('c2');
+            let r=''; 
+            for(i=0;i<allP.length;i++){
+                r+=allP[i].innerText;
+            }
+            result[0].innerText = r;
+        }
+    </script>
+</body>
+</html>
