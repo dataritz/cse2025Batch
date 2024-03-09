@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Action</th>
+            <th>Output</th>
+        </tr>
+        <tr>
+            <td>Dice</td>
+            <td><img src="image/dice.gif" width="15%" onclick="Dice()"></td>
+            <td id="o1"></td>
+        </tr>
+        <tr>
+            <td>OTP</td>
+            <td><button onclick="Otp()">Click Me</button></td>
+            <td id="o2"></td>
+        </tr>
+        <tr>
+            <td>Today's Dinner</td>
+            <td><button onclick="Dinner()">Click Me</button></td>
+            <td id="o3"></td>
+        </tr>
+        <tr>
+            <td>Rock paper scissors</td>
+            <td>
+                <button onclick="rps(1)">Rock</button>
+                <button onclick="rps(2)">Paper</button>
+                <button onclick="rps(3)">Scissors</button>
+            </td>
+            <td id="o4"></td>
+        </tr>
+        <tr>
+            <td>Today's Quotes</td>
+            <td><button onclick="Quotes()">Click Me</button></td>
+            <td id="o5"></td>
+        </tr>
+        <tr>
+            <td>Password Generator</td>
+            <td><button onclick="password()">Click Me</button></td>
+            <td id="o6"></td>
+        </tr>
+    </table>
+    <script>
+         function password(){
+            let d = Math.floor(Math.random()*(99-10)+1)+10;
+            let c1 = Math.floor(Math.random()*(122-97+1))+97;
+            let c2 = Math.floor(Math.random()*(122-97+1))+97;
+            let c3 = Math.floor(Math.random()*(122-97+1))+97;
+            let s = Math.floor(Math.random()*(47-33+1))+33;
+            document.querySelector('#o6').innerText = String.fromCharCode(c1)+String.fromCharCode(s)+d+String.fromCharCode(c2)+String.fromCharCode(c3);
+        }
+        function Quotes(){
+            let menu = ['A rose by any other name would smell as sweet.','All that glitters is not gold.','Eighty percent of success is showing up.','Elementary, my dear Watson.','Go ahead, make my day.','Hell is other people.','Houston, we have a problem.'];
+            let l = menu.length;
+            let x = Math.floor(Math.random()*l);
+            document.querySelector('#o5').innerText = menu[x];
+        }
+        function rps(user){
+            let comp = Math.floor(Math.random()*3)+1;
+            console.log(comp);
+            if(user==comp)
+                document.querySelector('#o4').innerText ="Tie";
+            else if(user==1&&comp==2 || user==3 && comp == 1 || user == 2 && comp == 3)
+                document.querySelector('#o4').innerText ='Computer Win'
+            else
+                document.querySelector('#o4').innerText = 'User Win';
+        }
+         function Dinner(){
+            let menu = ['Idli','Dhosa','Chole-Bhature','Methi-Paratha','Pasta','Dal-Makhni','Dhokla','Panner-Tikka','Chana-Jilebi','Puri-Subjee','Pani-Puri','Rajma-Chawal','Khadi-Chawal','Fried-Rice'];
+            let l = menu.length;
+            let x = Math.floor(Math.random()*l);
+            document.querySelector('#o3').innerText = menu[x];
+        }
+        function Dice(){
+            let x = Math.floor(Math.random()*6)+1;
+            document.querySelector('#o1').innerHTML = `<img src='image/${x}.png' width='15%'>`;
+        }
+        function Otp(){
+            let x = Math.floor(Math.random()*(999999-100000))+100000;
+            document.querySelector('#o2').innerText = x;
+        }
+    </script>
+</body>
+</html>
