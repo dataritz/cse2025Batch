@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">This is para 1</p>
+    <button onclick="Red()">Red</button>
+    <button onclick="Green()">Green</button>
+    <button>Blue</button>
+    <button>Yellow</button>
+    <button>Grey</button>
+    <script>
+        function Red(){
+            let elm = document.querySelector('#p1');
+            elm.setAttribute('style','color:red;border:2px solid green');
+        }
+        function Green(){
+            let elm = document.querySelector('#p1');
+            elm.setAttribute('style','color:green;border:2px solid blue');
+        }
+    </script>
+</body>
+</html>
