@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1">
+    <button onclick="search()">Search</button>
+    <script>
+        function search(){
+            let target = document.querySelector('#t1').value;
+            let flag = 0;
+            let arr = [12,34,45,56,6,7,78,2,3,4,5,6,7,8,9,123,234,235];
+            for(i=0;i<arr.length;i++){
+                if(arr[i]==target){
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==1)
+                alert("found");
+            else
+                alert('Not Found');
+        
+        arr.every()
+            }
+        
+    </script>
+</body>
+</html>
