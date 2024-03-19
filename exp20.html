@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1{
+            color: red;
+            border: 2px solid blue;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+   <p id="p1" onclick="abc()">This is para 1</p> 
+   <script>
+    function abc(){
+        let elm = document.querySelector('#p1');
+        elm.setAttribute('class','c1');
+        elm.setAttribute('name','para')
+    }
+   </script>
+</body>
+</html>
