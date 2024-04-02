@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="add()">Click to add</button>
+  <div id="d1">
+
+  </div>
+<script>
+  let count = 1;
+  function add(){
+    let elm = document.createElement('button');
+    let x = 'btn'+count++;
+    elm.innerHTML = `${x}`;
+    elm.setAttribute('id',`${x}`);
+    elm.setAttribute('onclick',`removeElem(${x})`)
+    let parnt = document.querySelector('#d1');
+    parnt.append(elm);
+
+  }
+
+  function removeElem(arg){
+    arg.remove();
+  }
+</script>
+
+</body>
+</html>

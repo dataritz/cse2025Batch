@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="d1">
+    Enter your task<input type="text" id="t1">
+    <button onclick="add()">Add</button>
+  </div>
+  <div id="d2">
+
+  </div>
+  <script>
+    let count=1;
+    function add(){
+      let row = document.createElement('p');
+      let taskvalue = document.querySelector('#t1').value;
+      row.innerHTML = taskvalue;
+      let btn = document.createElement('button');
+      btn.innerHTML = 'Delete';
+      let x = 'btn'+count++;
+      btn.setAttribute('id',`${x}`);
+      btn.setAttribute('onclick',`removeElm(${x})`);
+      row.append(btn);
+      let parnt = document.querySelector('#d2');
+      parnt.append(row);
+
+    }
+    function removeElm(arg){
+      arg.parentElement.remove();
+    }
+  </script>
+</body>
+</html>
