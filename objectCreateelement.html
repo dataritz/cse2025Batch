@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <div>
+      <button onclick="display()">Display Data</button>
+    </div>
+    <div>
+      <table id="t1" border="2">
+        <tr>
+          <th>Name</th>
+          <th>Marks</th>
+          <th>Branch</th>
+        </tr>
+      </table>
+    </div>
+  <script>
+    let student = {
+      1:{name:'Ram',branch:'CSE',marks:100},
+      2:{name:'Hanuman',branch:'CSDS',marks:80},
+      5:{name:'Ravan',branch:'ME',marks:70},
+      7:{name:'Laxman',branch:'IT',marks:60},
+      9:{name:'Herry',branch:'CSE',marks:0}
+    };
+    function display(){
+      for(let k in student){
+        let row = document.createElement('tr');
+        let col1 = document.createElement('td');
+        let col2 = document.createElement('td');
+        let col3 = document.createElement('td');
+        col1.innerHTML = student[k]['name'];
+        col2.innerHTML = student[k]['marks'];
+        col3.innerHTML = student[k]['branch'];
+        row.append(col1);
+        row.append(col2);
+        row.append(col3);
+        document.querySelector('#t1').append(row);
+      }
+      
+    }
+  </script>
+</body>
+</html>
